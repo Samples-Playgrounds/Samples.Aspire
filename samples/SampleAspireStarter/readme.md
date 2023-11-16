@@ -4,7 +4,7 @@ readme.md
 
 *   https://github.com/dotnet/aspire/issues/876
 
-*   
+*    https://github.com/dotnet/maui/issues/18802
 
 ```
 dotnet build ./SampleAspireStarter.AppHost/SampleAspireStarter.AppHost.csproj
