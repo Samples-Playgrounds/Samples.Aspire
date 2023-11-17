@@ -1,22 +1,8 @@
-IDistributedApplicationBuilder builder;
+var builder = DistributedApplication.CreateBuilder(args);
 
-IResourceBuilder<ProjectResource> apiservice;
-IResourceBuilder<ProjectResource> app_maui;
-IResourceBuilder<ProjectResource> app_web;
+var apiservice = builder.AddProject<Projects.SampleAspireStarter_ApiService>("apiservice");
 
-
-// 
-builder = DistributedApplication.CreateBuilder(args);
-
-
-apiservice = builder
-                .AddProject<Projects.SampleAspireStarter_ApiService>("apiservice");
-
-app_maui = builder
-                .AddProject<Projects.SampleMAUI>("app_maui");
-app_web = builder
-                .AddProject<Projects.SampleAspireStarter_Web>("app_web_frontend")
-                .WithReference(apiservice)
-                ;
+builder.AddProject<Projects.SampleAspireStarter_Web>("webfrontend")
+    .WithReference(apiservice);
 
 builder.Build().Run();
