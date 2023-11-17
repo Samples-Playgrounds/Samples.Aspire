@@ -11,7 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SampleAspireStarter.ApiService\SampleAspireStarter.ApiService.csproj" />
     <ProjectReference Include="..\SampleAspireStarter.Web\SampleAspireStarter.Web.csproj" />
-    <ProjectReference Include="..\SampleMAUI\SampleMAUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

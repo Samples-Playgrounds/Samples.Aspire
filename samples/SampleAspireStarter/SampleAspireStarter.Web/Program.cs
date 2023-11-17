@@ -1,7 +1,7 @@
 using SampleAspireStarter.Web;
 using SampleAspireStarter.Web.Components;
 
-WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
@@ -12,15 +12,9 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddOutputCache();
 
-builder.Services
-            .AddHttpClient<WeatherApiClient>
-                (
-                    client
-                    => 
-                    client.BaseAddress = new("http://apiservice")
-                );
+builder.Services.AddHttpClient<WeatherApiClient>(client=> client.BaseAddress = new("http://apiservice"));
 
-WebApplication app = builder.Build();
+var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
@@ -33,10 +27,8 @@ app.UseAntiforgery();
 
 app.UseOutputCache();
 
-app
-    .MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    ;
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
     
 app.MapDefaultEndpoints();
 
