@@ -26,8 +26,10 @@
     <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.1" />
   </ItemGroup>
 
+  <!-- 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+  -->
 
 </Project>
