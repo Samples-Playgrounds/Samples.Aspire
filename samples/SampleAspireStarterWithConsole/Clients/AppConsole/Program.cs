@@ -1,4 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
-for (int i=1; ; i++ )
-    Console.WriteLine($"Hello, World! {i}");
+Microsoft.Extensions.Hosting.HostApplicationBuilder builder;
+
+builder = Microsoft.Extensions.Hosting.Host
+                                        .CreateApplicationBuilder(args);
+builder
+    .Services
+        .AddHostedService<AppConsole.WeatherClientService>()
+        .AddHttpClient<AppConsole.WeatherApiClient>
+                                    (
+                                        client
+                                        => 
+                                        {
+                                            client.BaseAddress = new("http://apiservice");
+                                        }
+                                    )
+                ;
+
+Microsoft.Extensions.Hosting.IHost host = builder.Build();
+host.Run();
