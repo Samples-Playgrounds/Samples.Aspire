@@ -31,13 +31,17 @@
 
       SetTargetFramework
 
-      https://github.com/dotnet/sdk/issues/13961
-      https://github.com/dotnet/sdk/issues/2280
-      https://stackoverflow.com/questions/48526219/is-there-a-way-to-force-a-project-reference-to-net-standard-project-to-a-specif
+        https://github.com/dotnet/sdk/issues/13961
+        https://github.com/dotnet/sdk/issues/2280
+        https://github.com/dotnet/msbuild/issues/3356
+        https://stackoverflow.com/questions/48526219/is-there-a-way-to-force-a-project-reference-to-net-standard-project-to-a-specif
 
       SkipGetTargetFrameworkProperties
 
-    <ProjectReference 
+        https://github.com/dotnet/sdk/issues/22878
+        https://github.com/dotnet/msbuild/issues/3356
+
+        <ProjectReference 
       Include="..\SampleMAUI\SampleMAUI.csproj" 
       >
       <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
