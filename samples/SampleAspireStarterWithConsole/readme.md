@@ -14,6 +14,10 @@ dotnet run `
   --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
 ```
 
+![Aspire Dashboard with Console Clients](./img/Screenshot_2023-12-01_at_133009.png)
+
+
+![Running Console Client](./img/Untitled.png)
 
 
 ## Notes
