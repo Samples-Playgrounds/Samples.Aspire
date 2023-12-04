@@ -11,8 +11,12 @@ builder
     .AddProject<Projects.SampleAspireStarterWithConsole_Web>("webfrontend")
     .WithReference(apiservice);
 
+
 builder
     .AddProject<Projects.AppConsole>("console")
+    .WithReference(apiservice);
+builder
+    .AddProject<Projects.AppConsoleSelfHosted>("console_self_hosted")
     .WithReference(apiservice);
 
 builder.Build().Run();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
-namespace AppConsole
+namespace AppConsoleSelfHosted
 {
     public class WeatherClientService : IHostedService
     {

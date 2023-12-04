@@ -1,6 +1,22 @@
-# Aspire Extened
+# Aspire with simple client Console
+
+readme.md
+
+## Usage
+
+```bash
+dotnet run \
+  --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
+```
+
+```pwsh
+dotnet run `
+  --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
+```
 
 
+
+## Notes
 
 ```
 ll SampleAspireStarterWithConsole.AppHost/obj/Debug/net8.0/Aspire/
@@ -50,3 +66,24 @@ public class AppConsole : IServiceMetadata
 ```
 
 TODO: ask about project with the same name in different folders!?!?! Kaboooom?!?! Or not?
+
+
+
+
+
+
+
+
+
+https://dfederm.com/building-a-console-app-with-.net-generic-host/
+
+https://stackoverflow.com/questions/57992886/di-of-httpclientfactory-in-a-backgroundservice-for-a-console-app
+
+https://learn.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
+
+https://stackoverflow.com/questions/52622586/can-i-use-httpclientfactory-in-a-net-core-app-which-is-not-asp-net-core
+
+https://stackoverflow.com/questions/62499092/asp-core-ihostedservice-and-ihttpclientfactory-best-way
+
+
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-8.0
