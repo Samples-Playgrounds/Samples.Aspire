@@ -1,6 +1,6 @@
 using System.Net.Http.Json;
 
-namespace AppConsole;
+namespace AppConsoleSelfHosted;
 
 public class WeatherApiClient(HttpClient httpClient)
 {

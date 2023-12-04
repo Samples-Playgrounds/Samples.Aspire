@@ -8,6 +8,9 @@
     <IsAspireHost>true</IsAspireHost>
   </PropertyGroup>
 
+  <!-- 
+    Dependencies
+  -->
   <ItemGroup>
     <ProjectReference Include="..\SampleAspireStarterWithConsole.ApiService\SampleAspireStarterWithConsole.ApiService.csproj" />
     <ProjectReference Include="..\SampleAspireStarterWithConsole.Web\SampleAspireStarterWithConsole.Web.csproj" />
@@ -16,9 +19,13 @@
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
   </ItemGroup>
-  
+
+  <!-- 
+    Dependencies 
+  -->
   <ItemGroup>
     <ProjectReference Include="..\Clients\AppConsole\AppConsole.csproj" />
+    <ProjectReference Include="..\Clients\AppConsoleSelfHosted\AppConsoleSelfHosted.csproj" />
   </ItemGroup>
 
   

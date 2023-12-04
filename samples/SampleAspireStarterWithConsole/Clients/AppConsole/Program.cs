@@ -1,4 +1,5 @@
 ﻿
+using System.Net.Http;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -6,18 +7,22 @@ Microsoft.Extensions.Hosting.HostApplicationBuilder builder;
 
 builder = Microsoft.Extensions.Hosting.Host
                                         .CreateApplicationBuilder(args);
-builder
-    .Services
-        .AddHostedService<AppConsole.WeatherClientService>()
-        .AddHttpClient<AppConsole.WeatherApiClient>
-                                    (
-                                        client
-                                        => 
-                                        {
-                                            client.BaseAddress = new("http://apiservice");
-                                        }
-                                    )
-                ;
 
-Microsoft.Extensions.Hosting.IHost host = builder.Build();
-host.Run();
+/*
+TODO: 
+    apiservice
+    localhost:5393
+*/
+
+// HttpClient client = new ()                                        
+//                         {
+//                             client.BaseAddress = new("http://apiservice");
+//                         };
+
+
+for (int i=1; ; i++ )
+{
+    Console.WriteLine($"Hello, World! {i}");
+}
+
+return;

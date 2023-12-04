@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 
-namespace AppConsole
+namespace AppConsoleSelfHosted
 {
     public class WeatherClientService : IHostedService
     {
@@ -37,7 +37,8 @@ namespace AppConsole
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            DoWork1("http get from apiserivce");
+            DoWork_InfiniteLoop("http get from apiserivce");
+            // DoWork1("http get from apiserivce");
             // DoWork2("http get from apiserivce");
 
             return Task.CompletedTask;
@@ -46,6 +47,16 @@ namespace AppConsole
         public Task StopAsync(CancellationToken cancellationToken)
         {
             return Task.CompletedTask;
+        }
+
+        private async void DoWork_InfiniteLoop(object state)
+        {
+            for (int i=1; ; i++ )
+            {
+                Console.WriteLine($"Hello, World! {i}");
+            }
+
+            return;
         }
 
         private async void DoWork1(object state)
