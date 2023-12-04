@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "Client.AppUNO",
+  "display": "standalone",
+  "name": "Client.AppUNO",
+  "short_name": "Client.AppUNO",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
