@@ -50,6 +50,7 @@
       SetTargetFramework="TargetFramework=net8.0"
       SkipGetTargetFrameworkProperties="true"
       GlobalPropertiesToRemove="TargetFramework"
+      AdditionalProperties="TargetFramework=net8.0"
       >
       <!-- 
         Did not work:
@@ -58,6 +59,7 @@
       <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
       <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>      
       <UndefineProperties>TargetFramework</UndefineProperties>
+      <AdditionalProperties>TargetFramework=net8.0</AdditionalProperties>
     </ProjectReference>
   </ItemGroup>
 
