@@ -53,7 +53,9 @@ namespace AppConsoleSelfHosted
         {
             for (int i=1; ; i++ )
             {
-                Console.WriteLine($"Hello, World! {i}");
+                Console.WriteLine($"ConsoleSelfHosted");
+                Console.WriteLine($"    Hello, World! {i}");
+                Thread.Sleep(1000);
             }
 
             return;

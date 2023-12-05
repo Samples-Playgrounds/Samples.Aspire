@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SampleAspireStarterWithConsole.ServiceDefaults\SampleAspireStarterWithConsole.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\SampleAspireStarter.ServiceDefaults\SampleAspireStarter.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

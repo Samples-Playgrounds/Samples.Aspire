@@ -22,7 +22,9 @@ TODO:
 
 for (int i=1; ; i++ )
 {
-    Console.WriteLine($"Hello, World! {i}");
+    Console.WriteLine($"Console");
+    Console.WriteLine($"    Hello, World! {i}");
+    Thread.Sleep(1000);
 }
 
 return;

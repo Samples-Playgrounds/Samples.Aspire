@@ -8,14 +8,15 @@ Start orchestrator (Aspire AppHost) that will launch all services and some clien
 
 ```bash
 dotnet run \
-  --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
+  --project SampleAspireStarter.AppHost/SampleAspireStarter.AppHost.csproj
+
 ```
 
 or in powershell 8-)
 
 ```pwsh
 dotnet run `
-  --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
+  --project SampleAspireStarter.AppHost/SampleAspireStarter.AppHost.csproj
 ```
 
 Output:
@@ -23,21 +24,22 @@ Output:
 ```
 Building...
 info: Aspire.Dashboard.DashboardWebApplication[0]
-      Now listening on: http://localhost:15024
+      Now listening on: http://localhost:15011
 info: Aspire.Dashboard.DashboardWebApplication[0]
-      OTLP server running at: http://localhost:16223
+      OTLP server running at: http://localhost:16195
 info: Microsoft.Hosting.Lifetime[0]
       Application started. Press Ctrl+C to shut down.
 info: Microsoft.Hosting.Lifetime[0]
       Hosting environment: Development
 info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithConsole/SampleAspireStarter.AppHost
 ```  
 
 
 Open up Dasboard in browser and navigate to 
 
 ```
-open -a "Microsoft Edge" --url http://localhost:15024
+open -a "Microsoft Edge"  --args --url http://localhost:15011 --new-window
 ```
 
 ![Aspire Dashboard with Console Client](./img/Screenshot_2023-12-01_at_133009.png)

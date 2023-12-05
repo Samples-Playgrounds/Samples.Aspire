@@ -10,10 +10,12 @@
 
   <!-- 
     Dependencies
+      Services
+      Clients - ASP.net Blazor WASM
   -->
   <ItemGroup>
-    <ProjectReference Include="..\SampleAspireStarterWithConsole.ApiService\SampleAspireStarterWithConsole.ApiService.csproj" />
-    <ProjectReference Include="..\SampleAspireStarterWithConsole.Web\SampleAspireStarterWithConsole.Web.csproj" />
+    <ProjectReference Include="..\SampleAspireStarter.ApiService\SampleAspireStarter.ApiService.csproj" />
+    <ProjectReference Include="..\SampleAspireStarter.Web\SampleAspireStarter.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,12 +23,12 @@
   </ItemGroup>
 
   <!-- 
-    Dependencies 
+    Dependencies
+      Clients - non ASP.net
   -->
   <ItemGroup>
     <ProjectReference Include="..\Clients\AppConsole\AppConsole.csproj" />
     <ProjectReference Include="..\Clients\AppConsoleSelfHosted\AppConsoleSelfHosted.csproj" />
   </ItemGroup>
 
-  
 </Project>
