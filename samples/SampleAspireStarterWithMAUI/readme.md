@@ -26,6 +26,17 @@ Possible workaround:
 `SkipGetTargetFrameworkProperties`
 
 
+https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022#projectreference
+
+ProjectReference
+
+  SetTargetFramework
+
+  SkipGetTargetFrameworkProperties
+
+  GlobalPropertiesToRemove
+
+
 
 ```
 dotnet build ./SampleMAUI/SampleMAUI.csproj -t:run -f:net8.0-ios
