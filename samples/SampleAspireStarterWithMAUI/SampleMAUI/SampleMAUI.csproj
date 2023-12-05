@@ -64,6 +64,10 @@
 
 	<!--
 		Aspire integration
+	-->
+	<ItemGroup>
+		<PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference 
@@ -71,9 +75,5 @@
 			>
 		</ProjectReference>
 	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
-	</ItemGroup>
-	-->
 	
 </Project>
