@@ -4,17 +4,43 @@ readme.md
 
 ## Usage
 
+Start orchestrator (Aspire AppHost) that will launch all services and some clients
+
 ```bash
 dotnet run \
   --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
 ```
+
+or in powershell 8-)
 
 ```pwsh
 dotnet run `
   --project SampleAspireStarterWithConsole.AppHost/SampleAspireStarterWithConsole.AppHost.csproj
 ```
 
-![Aspire Dashboard with Console Clients](./img/Screenshot_2023-12-01_at_133009.png)
+Output:
+
+```
+Building...
+info: Aspire.Dashboard.DashboardWebApplication[0]
+      Now listening on: http://localhost:15024
+info: Aspire.Dashboard.DashboardWebApplication[0]
+      OTLP server running at: http://localhost:16223
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+```  
+
+
+Open up Dasboard in browser and navigate to 
+
+```
+open -a "Microsoft Edge" --url http://localhost:15024
+```
+
+![Aspire Dashboard with Console Client](./img/Screenshot_2023-12-01_at_133009.png)
 
 
 ![Running Console Client](./img/Untitled.png)
