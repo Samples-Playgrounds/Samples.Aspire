@@ -29,6 +29,9 @@
 
       https://github.com/dotnet/maui/issues/18802#issuecomment-1815460892
 
+      
+		  https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022#projectreference
+
       SetTargetFramework
 
         https://github.com/dotnet/sdk/issues/13961
@@ -41,12 +44,21 @@
         https://github.com/dotnet/sdk/issues/22878
         https://github.com/dotnet/msbuild/issues/3356
 
-        <ProjectReference 
-      Include="..\SampleMAUI\SampleMAUI.csproj" 
-      >
-      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
-    </ProjectReference>
       -->
+    <ProjectReference 
+      Include="..\SampleMAUI\SampleMAUI.csproj" 
+      SetTargetFramework="TargetFramework=net8.0"
+      SkipGetTargetFrameworkProperties="true"
+      GlobalPropertiesToRemove="TargetFramework"
+      >
+      <!-- 
+        Did not work:
+      <SetTargetFramework>net8.0</SetTargetFramework>
+      -->
+      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>      
+      <UndefineProperties>TargetFramework</UndefineProperties>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
