@@ -1,4 +1,9 @@
-﻿ class Program
+﻿ using Microsoft.Extensions.Configuration;
+ using Microsoft.Extensions.DependencyInjection;
+ using Microsoft.Extensions.Hosting;
+ using Microsoft.Extensions.Logging;
+
+ class Program
 {
     static void Main(string[] args)
     {
@@ -16,20 +21,20 @@
                                         (
                                             (context, services) =>
                                             {
-                                                services.AddDbContext<EquitiesDbContext>
-                                                (
-                                                    options
-                                                    => 
-                                                    {
-                                                        options.UseSqlServer
-                                                                    (
-                                                                        context
-                                                                            .Configuration
-                                                                                .GetConnectionString("Equities")
-                                                                    ); 
-                                                    }
-                                                );
-                                                services.AddScoped<ProgramAsync>();
+                                                // services.AddDbContext<EquitiesDbContext>
+                                                // (
+                                                //     options
+                                                //     => 
+                                                //     {
+                                                //         options.UseSqlServer
+                                                //                     (
+                                                //                         context
+                                                //                             .Configuration
+                                                //                                 .GetConnectionString("Equities")
+                                                //                     ); 
+                                                //     }
+                                                // );
+                                                // services.AddScoped<ProgramAsync>();
                                             }
                                         )
                                 .ConfigureLogging
@@ -47,8 +52,8 @@
         {
             using( IServiceScope scope = host.Services.CreateScope() )
             {
-                ProgramAsync p = scope.ServiceProvider.GetRequiredService<ProgramAsync>();
-                p.MainAsync().Wait();
+                // ProgramAsync p = scope.ServiceProvider.GetRequiredService<ProgramAsync>();
+                // p.MainAsync().Wait();
             }
         }
         Console.WriteLine("Done.");

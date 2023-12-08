@@ -1,4 +1,7 @@
-﻿public class Program
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -11,15 +14,18 @@
         //configure console logging
         serviceProvider
             .GetService<ILoggerFactory>()
-            .AddConsole(LogLevel.Debug);
+            //.AddConsole(LogLevel.Debug)
+            ;
 
-        var logger = serviceProvider.GetService<ILoggerFactory>()
-            .CreateLogger<Program>();
+        ILogger<Program> logger = serviceProvider
+                                        .GetService<ILoggerFactory>()
+                                        .CreateLogger<Program>();
 
         logger.LogDebug("Logger is working!");
 
         // Get Service and call method
-        var service = serviceProvider.GetService<IMyService>();
+        IMyService? service = serviceProvider
+                                    .GetService<IMyService>();
         service.MyServiceMethod();
     }
 }

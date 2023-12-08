@@ -1,3 +1,6 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
 public class MyService : IMyService
 {
     private readonly string _baseUrl;
