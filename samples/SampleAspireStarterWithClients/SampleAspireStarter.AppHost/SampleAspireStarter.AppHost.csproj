@@ -29,8 +29,12 @@
       >
     </ProjectReference>
     <ProjectReference 
-      Include="..\Clients\Client.AppConsole.Consumer\Client.AppConsole.Producer.csproj" 
+      Include="..\Clients\Client.AppConsole.Producer\Client.AppConsole.Producer.csproj" 
       >
+    </ProjectReference>
+    <ProjectReference
+            Include="..\Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj"
+    >
     </ProjectReference>
   </ItemGroup>
 

@@ -16,18 +16,23 @@ builder
     .WithReference(apiservice)
     ;
 
-#if __BRAINSTORMING__
 builder
-    .AddProject<Projects.Clients.Client_AppConsole_Consumer>("client_app_console_consumer")
+    .AddProject<Projects.Client_AppConsole_Consumer>("client_app_console_consumer")
     .WithReference(apiservice)
     ;
-
 builder
-    .AddProject<Projects.Clients.Client_AppConsole_Consumer>("client_app_console_producer")
+    .AddProject<Projects.Client_AppConsole_Producer>("client_app_console_producer")
     // localhost:PORT           possible
     // IP_PRIVATE_NETWORK:PORT  possible??
     .WithReference(apiservice)
     ;
+builder
+    .AddProject<Projects.Client_AppAvalonia_MVVM>("client_app_avalonia_mvvm")
+    .WithReference(apiservice)
+    ;
+
+#if __BRAINSTORMING__
+
 
 builder
     .AddProject<Projects.Clients.Client_AppMAUI>("client_app_maui")
