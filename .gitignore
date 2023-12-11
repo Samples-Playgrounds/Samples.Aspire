@@ -320,7 +320,7 @@ tools/
 
 #----------------------------------------------
 # Xamarin Components and nuget packages
-**/Components/
+./Components/
 **/packages/
 src/samples/Components/**
 source/samples/Components/**

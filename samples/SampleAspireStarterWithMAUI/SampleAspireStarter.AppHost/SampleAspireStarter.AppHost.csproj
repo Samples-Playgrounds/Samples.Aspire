@@ -29,7 +29,8 @@
 
       https://github.com/dotnet/maui/issues/18802#issuecomment-1815460892
 
-      
+      csproj : error NU1201: Project  is not compatible with net
+
 		  https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022#projectreference
 
       SetTargetFramework

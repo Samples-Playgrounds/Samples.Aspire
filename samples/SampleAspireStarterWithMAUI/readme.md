@@ -74,5 +74,70 @@ https://learn.microsoft.com/en-us/xamarin/android/deploy-test/building-apps/buil
 
     https://developer.android.com/tools/adb#issuingcommands
 
+Added `net8.0` TFM to MAUI app project (similar trick is done for Maui Unit/UI Tests projects):
+
+Original:
+
+```
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+```
+
+Changed to:
+
+```
+		<TargetFrameworks>net8.0;net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+```
 
 
+```
+CSC : error CS5001: Program does not contain a static 'Main' method suitable for an entry point [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-arm64'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-arm'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+Properties/launchSettings.json : error : The path '../../../../../../../../../Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/Properties/launchSettings.json' would result in a file outside of the app bundle and cannot be used. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-maccatalyst]
+Properties/launchSettings.json : error :          [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-maccatalyst]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-x64'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-x86'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+Properties/launchSettings.json : error : The path '../../../../../../../../../Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/Properties/launchSettings.json' would result in a file outside of the app bundle and cannot be used. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-ios]
+Properties/launchSettings.json : error :          [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-ios]
+
+The build failed. Fix the build errors and run again.
+```
+
+Changed
+
+
+```
+    <OutputType>Exe</OutputType>
+```
+
+```
+		<OutputType Condition=" '$(TargetFramework)' != 'net8.0' ">Exe</OutputType>
+```
+
+
+Results in error:
+
+```
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-arm64'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-arm'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-x86'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+/usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets(491,5): error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier 'android-x64'. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-android]
+Properties/launchSettings.json : error : The path '../../../../../../../../../Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/Properties/launchSettings.json' would result in a file outside of the app bundle and cannot be used. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-maccatalyst]
+Properties/launchSettings.json : error :          [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-maccatalyst]
+Properties/launchSettings.json : error : The path '../../../../../../../../../Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/Properties/launchSettings.json' would result in a file outside of the app bundle and cannot be used. [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-ios]
+Properties/launchSettings.json : error :          [/Users/Shared/Projects/d/Samples-Playgrounds/Aspire/m/samples/SampleAspireStarterWithMAUI/SampleMAUI/SampleMAUI.csproj::TargetFramework=net8.0-ios]
+
+The build failed. Fix the build errors and run again.
+m/samples/SampleAspireStarterWithMAUI % 
+```
+
+
+So, iOS has issues with `Properties/launchSettings.json` and  
+
+
+```
+error NETSDK1082: There was no runtime pack for Microsoft.AspNetCore.App available for the specified RuntimeIdentifier
+```
+
+
+is reported only for Android.
