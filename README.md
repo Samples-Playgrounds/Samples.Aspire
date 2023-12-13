@@ -32,12 +32,43 @@ Samples and playgrounds for Aspire and client integration (console apps, MAUI,..
 
   *  https://github.com/dotnet/aspire/issues/876
 
+*   https://learn.microsoft.com/en-us/dotnet/aspire/reference/aspire-faq
+
+*   https://learn.microsoft.com/en-us/dotnet/aspire/get-started/build-your-first-aspire-app?tabs=visual-studio
+
+*   https://devblogs.microsoft.com/dotnet/introducing-dotnet-aspire-simplifying-cloud-native-development-with-dotnet-8/
+
+*   https://learn.microsoft.com/en-us/dotnet/aspire/deployment/azure/aca-deployment?tabs=visual-studio%2Cinstall-az-windows%2Cpowershell&pivots=azure-azd
+
+*   https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022#projectreference
+
+## Videos
+
+*   What Is .NET Aspire? The Insane Future of .NET!
+
+    *   https://www.youtube.com/watch?v=DORZA_S7f9w&ab_channel=NickChapsas
+
+*   How to Deploy .NET 8's New .NET Aspire Stack
+
+    *   https://www.youtube.com/watch?v=HYe6y1kBuGI&ab_channel=NickChapsas
+
+*   Building Cloud Native apps with .NET 8 | .NET Conf 2023
+
+    *   https://www.youtube.com/watch?v=z1M-7Bms1Jg&ab_channel=dotnet
+
+*   Cloud-native apps with .NET Aspire
+
+    *   https://www.youtube.com/watch?v=J02mvcEKrsI&ab_channel=LaylaCodesIt
+
+
 
 ## Client integration (MAUI and other) related issues
 
 *  https://github.com/dotnet/aspire/issues/876
 
 *  https://github.com/dotnet/maui/issues/18802
+
+## 
 
 
 ## Related and Contacts
@@ -74,3 +105,15 @@ Samples and playgrounds for Aspire and client integration (console apps, MAUI,..
 
         *   https://learn.microsoft.com/en-us/samples/browse/?terms=orleans
         
+
+
+
+## Discussion
+
+*   David Folwer
+
+    *   There are 2 things to look at:
+
+        *   Launching the MAUI application
+
+        *   Making service discovery work
