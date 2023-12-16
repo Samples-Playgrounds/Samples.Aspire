@@ -106,14 +106,3 @@ Samples and playgrounds for Aspire and client integration (console apps, MAUI,..
         *   https://learn.microsoft.com/en-us/samples/browse/?terms=orleans
         
 
-
-
-## Discussion
-
-*   David Folwer
-
-    *   There are 2 things to look at:
-
-        *   Launching the MAUI application
-
-        *   Making service discovery work
