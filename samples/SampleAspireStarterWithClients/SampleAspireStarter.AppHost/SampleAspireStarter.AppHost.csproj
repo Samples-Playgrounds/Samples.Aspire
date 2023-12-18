@@ -32,10 +32,24 @@
       Include="..\Clients\Client.AppConsole.Producer\Client.AppConsole.Producer.csproj" 
       >
     </ProjectReference>
-    <ProjectReference
-            Include="..\Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj"
-    >
+    <ProjectReference 
+      Include="..\Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj"
+      >
     </ProjectReference>
+    <ProjectReference
+      Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Browser\Client.AppAvalonia.XPlat.Browser.csproj"
+      >
+    </ProjectReference>
+    <ProjectReference
+      Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Desktop\Client.AppAvalonia.XPlat.Desktop.csproj"
+      >
+    </ProjectReference>
+    <!--
+    <ProjectReference
+      Include="..\Clients\Client.AppUNO\Client.AppUNO.Wasm\Client.AppUNO.Wasm.csproj"
+      >
+    </ProjectReference>
+    -->
   </ItemGroup>
 
 </Project>

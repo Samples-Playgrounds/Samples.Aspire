@@ -16,6 +16,7 @@ builder
     .WithReference(apiservice)
     ;
 
+/*
 builder
     .AddProject<Projects.Client_AppConsole_Consumer>("client_app_console_consumer")
     .WithReference(apiservice)
@@ -31,6 +32,16 @@ builder
     .WithReference(apiservice)
     ;
 
+builder
+    .AddProject<Projects.Client_AppAvalonia_XPlat_Browser>("client_app_avalonia_xplat_browser")
+    .WithReference(apiservice)
+    ;
+
+builder
+    .AddProject<Projects.Client_AppAvalonia_XPlat_Desktop>("client_app_avalonia_xplat_desktop")
+    .WithReference(apiservice)
+    ;
+*/
 #if __BRAINSTORMING__
 
 
