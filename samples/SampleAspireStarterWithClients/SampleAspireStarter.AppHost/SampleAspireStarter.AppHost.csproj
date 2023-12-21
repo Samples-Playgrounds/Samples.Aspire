@@ -20,16 +20,26 @@
   <PropertyGroup>
     <__BRAINSTORMING__>false</__BRAINSTORMING__>
   </PropertyGroup>
+  
+  
   <!-- 
     Console integration
   -->
   <ItemGroup>
     <ProjectReference 
-      Include="..\Clients\Client.AppConsole.Consumer\Client.AppConsole.Consumer.csproj" 
+      Include="..\Clients\Client.AppConsole\Client.AppConsole.csproj" 
       >
     </ProjectReference>
     <ProjectReference 
-      Include="..\Clients\Client.AppConsole.Producer\Client.AppConsole.Producer.csproj" 
+      Include="..\Clients\Client.AppConsole.InfiniteLoop\Client.AppConsole.InfiniteLoop.csproj"
+      >
+    </ProjectReference>
+    <ProjectReference
+      Include="..\Clients\Client.AppConsole.SelfHosted.InfiniteLoop\Client.AppConsole.SelfHosted.InfiniteLoop.csproj"
+      >
+    </ProjectReference>
+    <ProjectReference
+      Include="..\Clients\Client.AppConsole.SelfHosted.With.Configuration\Client.AppConsole.SelfHosted.With.Configuration.csproj"
       >
     </ProjectReference>
     <ProjectReference 

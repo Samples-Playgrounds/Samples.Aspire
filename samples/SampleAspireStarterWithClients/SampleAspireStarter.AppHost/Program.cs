@@ -16,13 +16,18 @@ builder
     .WithReference(apiservice)
     ;
 
-/*
 builder
-    .AddProject<Projects.Client_AppConsole_Consumer>("client_app_console_consumer")
+    .AddProject<Projects.Client_AppConsole>("client_app_console")
     .WithReference(apiservice)
     ;
 builder
-    .AddProject<Projects.Client_AppConsole_Producer>("client_app_console_producer")
+    .AddProject<Projects.Client_AppConsole_InfiniteLoop>("client_app_console_infinite_loop")
+    // localhost:PORT           possible
+    // IP_PRIVATE_NETWORK:PORT  possible??
+    .WithReference(apiservice)
+    ;
+builder
+    .AddProject<Projects.Client_AppConsole_SelfHosted_InfiniteLoop>("client_app_console_self_hosted_infinite_loop")
     // localhost:PORT           possible
     // IP_PRIVATE_NETWORK:PORT  possible??
     .WithReference(apiservice)
@@ -41,7 +46,8 @@ builder
     .AddProject<Projects.Client_AppAvalonia_XPlat_Desktop>("client_app_avalonia_xplat_desktop")
     .WithReference(apiservice)
     ;
-*/
+
+
 #if __BRAINSTORMING__
 
 
