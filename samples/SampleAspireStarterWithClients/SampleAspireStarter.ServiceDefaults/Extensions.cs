@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+//using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -11,7 +11,12 @@ namespace Microsoft.Extensions.Hosting;
 
 public static class Extensions
 {
-    public static IHostApplicationBuilder AddServiceDefaults(this IHostApplicationBuilder builder)
+    public static 
+        IHostApplicationBuilder 
+                                        AddServiceDefaults
+                                        (
+                                            this IHostApplicationBuilder builder
+                                        )
     {
         builder.ConfigureOpenTelemetry();
 
@@ -31,7 +36,12 @@ public static class Extensions
         return builder;
     }
 
-    public static IHostApplicationBuilder ConfigureOpenTelemetry(this IHostApplicationBuilder builder)
+    public static 
+        IHostApplicationBuilder 
+                                        ConfigureOpenTelemetry
+                                        (
+                                            this IHostApplicationBuilder builder
+                                        )
     {
         builder.Logging.AddOpenTelemetry(logging =>
         {
@@ -63,7 +73,12 @@ public static class Extensions
         return builder;
     }
 
-    private static IHostApplicationBuilder AddOpenTelemetryExporters(this IHostApplicationBuilder builder)
+    private static 
+        IHostApplicationBuilder 
+                                        AddOpenTelemetryExporters
+                                        (
+                                            this IHostApplicationBuilder builder
+                                        )
     {
         var useOtlpExporter = !string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]);
 
@@ -85,7 +100,12 @@ public static class Extensions
         return builder;
     }
 
-    public static IHostApplicationBuilder AddDefaultHealthChecks(this IHostApplicationBuilder builder)
+    public static 
+        IHostApplicationBuilder 
+                                        AddDefaultHealthChecks
+                                        (
+                                            this IHostApplicationBuilder builder
+                                        )
     {
         builder.Services.AddHealthChecks()
             // Add a default liveness check to ensure app is responsive
@@ -94,7 +114,12 @@ public static class Extensions
         return builder;
     }
 
-    public static WebApplication MapDefaultEndpoints(this WebApplication app)
+    public static 
+        WebApplication 
+                                        MapDefaultEndpoints
+                                        (
+                                            this WebApplication app
+                                        )
     {
         // Uncomment the following line to enable the Prometheus endpoint (requires the OpenTelemetry.Exporter.Prometheus.AspNetCore package)
         // app.MapPrometheusScrapingEndpoint();
@@ -111,7 +136,13 @@ public static class Extensions
         return app;
     }
 
-    private static MeterProviderBuilder AddBuiltInMeters(this MeterProviderBuilder meterProviderBuilder) =>
+    private static 
+        MeterProviderBuilder 
+                                        AddBuiltInMeters
+                                        (
+                                            this MeterProviderBuilder meterProviderBuilder
+                                        ) 
+                                        =>
         meterProviderBuilder.AddMeter(
             "Microsoft.AspNetCore.Hosting",
             "Microsoft.AspNetCore.Server.Kestrel",
