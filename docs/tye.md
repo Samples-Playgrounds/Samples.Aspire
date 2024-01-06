@@ -28,7 +28,11 @@ tye.md
 
 *   https://docs.abp.io/en/commercial/latest/startup-templates/microservice/tye-integration
 
-https://marathonus.com/about/blog/getting-started-with-project-tye/
+*   https://marathonus.com/about/blog/getting-started-with-project-tye/
 
-https://www.daveabrock.com/2020/08/19/microservices-with-tye-1/
+*   https://www.daveabrock.com/2020/08/19/microservices-with-tye-1/
 
+
+*   Project Tye: Building Developer Focused Tooling for Kubernetes and .NET - David Fowler
+
+    *   https://www.youtube.com/watch?v=prbYvVVAcRs&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D
