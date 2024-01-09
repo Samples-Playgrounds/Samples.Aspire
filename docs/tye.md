@@ -36,3 +36,7 @@ tye.md
 *   Project Tye: Building Developer Focused Tooling for Kubernetes and .NET - David Fowler
 
     *   https://www.youtube.com/watch?v=prbYvVVAcRs&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D
+
+    *   port assignment
+
+        *   random
