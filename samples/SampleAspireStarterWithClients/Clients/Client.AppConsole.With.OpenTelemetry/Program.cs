@@ -7,19 +7,19 @@ using OpenTelemetry.Resources;
 
 // ...
 
-var serviceName = "Client.AppConsole.With.OpenTelemetry";
-var serviceVersion = "1.0.0";
+string service_name = "Client.AppConsole.With.OpenTelemetry";
+string service_version = "1.0.0";
 
 using TracerProvider tracerProvider = Sdk
                                         .CreateTracerProviderBuilder()
-                                        .AddSource(serviceName)
+                                        .AddSource(service_name)
                                         .SetResourceBuilder
                                                 (
                                                     ResourceBuilder.CreateDefault()
                                                     .AddService
                                                             (
-                                                                serviceName: serviceName, 
-                                                                serviceVersion: serviceVersion
+                                                                serviceName: service_name, 
+                                                                serviceVersion: service_version
                                                             )
                                                 )
                                         .AddConsoleExporter()
@@ -27,4 +27,13 @@ using TracerProvider tracerProvider = Sdk
 
 
 Console.WriteLine("Console.WriteLine - Hello, World! Launched by Aspire");
-Trace.WriteLine("Trace.WriteLine - Hello, World! Launched by Aspire");
+System.Diagnostics.Trace.WriteLine
+                            (
+                                "Trace.WriteLine"
+                                + Environment.NewLine + 
+                                "\t" +
+                                "Console App With Open Telemetry"
+                                + Environment.NewLine +
+                                "\t\t" +
+                                "Hello, World! Launched by Aspire"
+                            );
