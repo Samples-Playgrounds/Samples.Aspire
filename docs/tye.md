@@ -40,3 +40,38 @@ tye.md
     *   port assignment
 
         *   random
+
+        *   service discovery
+
+            *   `tye` inserts envirnonment variables with a well known scheme before each process starts
+
+                *   binding information
+
+                *   connection strings
+
+            *   each service knows about other services
+
+            *   `tye run`
+
+                * each service known data being used:
+
+                    *   hostname
+
+                    *   port
+
+                    *   protocol (schema)
+
+```csharp
+builder.Services.AddHttpClient<WeatherClient>
+                    (
+                        "backend_weather_client", 
+                        client =>
+                        {
+                            client.BaseAddress = Configuration.GetServiceUri("backend_weather_client");
+                        }
+                    );
+```
+
+            *   VSCode extension - Tye Explorer
+
+            
