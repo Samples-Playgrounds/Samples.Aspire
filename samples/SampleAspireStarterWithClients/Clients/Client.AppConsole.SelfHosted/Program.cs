@@ -1,11 +1,9 @@
-﻿
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+﻿Microsoft.Extensions.Hosting.HostApplicationBuilder builder;
+Microsoft.Extensions.Hosting.IHost host;
 
-Microsoft.Extensions.Hosting.HostApplicationBuilder builder;
-
-builder = Microsoft.Extensions.Hosting.Host
-                                        .CreateApplicationBuilder(args);
+builder = Microsoft.Extensions.Hosting
+                    .Host
+                        .CreateApplicationBuilder(args);
 builder
     .Services
         .AddHostedService<AppConsoleSelfHosted.WeatherClientService>()
@@ -17,7 +15,7 @@ builder
                                             client.BaseAddress = new("http://apiservice");
                                         }
                                     )
-                ;
+        ;
 
-Microsoft.Extensions.Hosting.IHost host = builder.Build();
+host  = builder.Build();
 host.Run();
