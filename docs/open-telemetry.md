@@ -6,6 +6,8 @@ open-telemetry.md
 
 *   https://github.com/open-telemetry/opentelemetry-dotnet/tree/main/examples
 
+*   https://www.c-sharpcorner.com/article/getting-started-with-opentelemetry/
+
 *   https://logz.io/blog/csharp-dotnet-opentelemetry-instrumentation/#2
 
 *   https://opentelemetry.io/docs/instrumentation/net/
