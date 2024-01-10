@@ -34,6 +34,8 @@
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppConsole.InfiniteLoop\Client.AppConsole.InfiniteLoop.csproj">
     </ProjectReference>
+    <ProjectReference Include="..\Clients\Client.AppConsole.With.OpenTelemetry\Client.AppConsole.With.OpenTelemetry.csproj">
+    </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppConsole.SelfHosted.InfiniteLoop\Client.AppConsole.SelfHosted.InfiniteLoop.csproj">
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppConsole.SelfHosted.With.Configuration\Client.AppConsole.SelfHosted.With.Configuration.csproj">
