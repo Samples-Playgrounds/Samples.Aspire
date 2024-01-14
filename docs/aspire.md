@@ -23,3 +23,6 @@
 
 *   https://nicksnettravels.builttoroam.com/net-aspire-with-winui-winforms-and-wpf/
 
+## Application Insights
+
+*   https://learn.microsoft.com/en-us/dotnet/aspire/deployment/azure/application-insights
