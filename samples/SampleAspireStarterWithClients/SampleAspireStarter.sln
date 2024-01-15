@@ -12,64 +12,70 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAspireStarter.Web", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.MVVM", "Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj", "{5C816ABB-F895-46FF-B8B0-F94E4635FC57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.MVVM", "Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj", "{5C816ABB-F895-46FF-B8B0-F94E4635FC57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia", "Clients\Client.AppAvalonia\Client.AppAvalonia.csproj", "{29C21544-F270-4171-BC95-E6E6D6ED5971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia", "Clients\Client.AppAvalonia\Client.AppAvalonia.csproj", "{29C21544-F270-4171-BC95-E6E6D6ED5971}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppMAUI", "Clients\Client.AppMAUI\Client.AppMAUI.csproj", "{7C72C131-0A66-4ADE-97C9-293F6896B624}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppMAUI", "Clients\Client.AppMAUI\Client.AppMAUI.csproj", "{7C72C131-0A66-4ADE-97C9-293F6896B624}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client.AppUNO", "Client.AppUNO", "{65207F9C-B5B6-4384-8D81-8FD05A27C266}"
 	ProjectSection(SolutionItems) = preProject
-		Clients\Client.AppUNO\Directory.Packages.props = Clients\Client.AppUNO\Directory.Packages.props
-		Clients\Client.AppUNO\Directory.Build.targets = Clients\Client.AppUNO\Directory.Build.targets
 		Clients\Client.AppUNO\Directory.Build.props = Clients\Client.AppUNO\Directory.Build.props
+		Clients\Client.AppUNO\Directory.Build.targets = Clients\Client.AppUNO\Directory.Build.targets
+		Clients\Client.AppUNO\Directory.Packages.props = Clients\Client.AppUNO\Directory.Packages.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client.AppAvalonia.XPlat", "Client.AppAvalonia.XPlat", "{F4572342-813B-49F5-81B3-915E2EE75143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.XPlat", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.csproj", "{51359C84-FF20-4602-B9BB-03F20A7BEDEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.XPlat", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.csproj", "{51359C84-FF20-4602-B9BB-03F20A7BEDEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.XPlat.iOS", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.iOS\Client.AppAvalonia.XPlat.iOS.csproj", "{E29CCC1A-25A9-4FE6-964F-50E624F7277A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.XPlat.iOS", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.iOS\Client.AppAvalonia.XPlat.iOS.csproj", "{E29CCC1A-25A9-4FE6-964F-50E624F7277A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.XPlat.Desktop", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Desktop\Client.AppAvalonia.XPlat.Desktop.csproj", "{E6A3BBD5-7CBF-4414-85E6-689C3DCD4297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.XPlat.Desktop", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Desktop\Client.AppAvalonia.XPlat.Desktop.csproj", "{E6A3BBD5-7CBF-4414-85E6-689C3DCD4297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.XPlat.Browser", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Browser\Client.AppAvalonia.XPlat.Browser.csproj", "{9C2F05C6-3A73-4411-B12E-D95816E076CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.XPlat.Browser", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Browser\Client.AppAvalonia.XPlat.Browser.csproj", "{9C2F05C6-3A73-4411-B12E-D95816E076CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppAvalonia.XPlat.Android", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Android\Client.AppAvalonia.XPlat.Android.csproj", "{86EA6EC7-2A32-4EB7-AB17-24C561208BA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppAvalonia.XPlat.Android", "Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Android\Client.AppAvalonia.XPlat.Android.csproj", "{86EA6EC7-2A32-4EB7-AB17-24C561208BA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Server", "Clients\Client.AppUNO\Client.AppUNO.Server\Client.AppUNO.Server.csproj", "{09FFF6C9-8CB4-4CBB-A6C1-D3AF3915C90C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Server", "Clients\Client.AppUNO\Client.AppUNO.Server\Client.AppUNO.Server.csproj", "{09FFF6C9-8CB4-4CBB-A6C1-D3AF3915C90C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Wasm", "Clients\Client.AppUNO\Client.AppUNO.Wasm\Client.AppUNO.Wasm.csproj", "{9D20058B-F617-4A9B-A226-BE1EBD7793D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Wasm", "Clients\Client.AppUNO\Client.AppUNO.Wasm\Client.AppUNO.Wasm.csproj", "{9D20058B-F617-4A9B-A226-BE1EBD7793D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Mobile", "Clients\Client.AppUNO\Client.AppUNO.Mobile\Client.AppUNO.Mobile.csproj", "{06FA26D5-6470-4F6E-8B7D-F5875C730106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Mobile", "Clients\Client.AppUNO\Client.AppUNO.Mobile\Client.AppUNO.Mobile.csproj", "{06FA26D5-6470-4F6E-8B7D-F5875C730106}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Skia.Gtk", "Clients\Client.AppUNO\Client.AppUNO.Skia.Gtk\Client.AppUNO.Skia.Gtk.csproj", "{E2235645-D85D-4CA2-A0F3-8E0412B1D6D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Skia.Gtk", "Clients\Client.AppUNO\Client.AppUNO.Skia.Gtk\Client.AppUNO.Skia.Gtk.csproj", "{E2235645-D85D-4CA2-A0F3-8E0412B1D6D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Tests", "Clients\Client.AppUNO\Client.AppUNO.Tests\Client.AppUNO.Tests.csproj", "{85B9CDF6-2077-492C-A3CE-367AAAB88EE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Tests", "Clients\Client.AppUNO\Client.AppUNO.Tests\Client.AppUNO.Tests.csproj", "{85B9CDF6-2077-492C-A3CE-367AAAB88EE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.DataContracts", "Clients\Client.AppUNO\Client.AppUNO.DataContracts\Client.AppUNO.DataContracts.csproj", "{5424A916-DB74-4A4D-BB5B-1DEBC12E8684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.DataContracts", "Clients\Client.AppUNO\Client.AppUNO.DataContracts\Client.AppUNO.DataContracts.csproj", "{5424A916-DB74-4A4D-BB5B-1DEBC12E8684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.UITests", "Clients\Client.AppUNO\Client.AppUNO.UITests\Client.AppUNO.UITests.csproj", "{6445FE78-4AE4-4D13-B325-D7D306CA1062}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.UITests", "Clients\Client.AppUNO\Client.AppUNO.UITests\Client.AppUNO.UITests.csproj", "{6445FE78-4AE4-4D13-B325-D7D306CA1062}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO", "Clients\Client.AppUNO\Client.AppUNO\Client.AppUNO.csproj", "{60372A4C-3589-4BCB-91B9-B80AACF4F32A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO", "Clients\Client.AppUNO\Client.AppUNO\Client.AppUNO.csproj", "{60372A4C-3589-4BCB-91B9-B80AACF4F32A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppUNO.Windows", "Clients\Client.AppUNO\Client.AppUNO.Windows\Client.AppUNO.Windows.csproj", "{3379563E-6F61-4E5B-B799-CB3B3ADABBFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppUNO.Windows", "Clients\Client.AppUNO\Client.AppUNO.Windows\Client.AppUNO.Windows.csproj", "{3379563E-6F61-4E5B-B799-CB3B3ADABBFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole", "Clients\Client.AppConsole\Client.AppConsole.csproj", "{124354B0-F839-4561-8D6D-C1E53C3016A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole", "Clients\Client.AppConsole\Client.AppConsole.csproj", "{124354B0-F839-4561-8D6D-C1E53C3016A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.InfiniteLoop", "Clients\Client.AppConsole.InfiniteLoop\Client.AppConsole.InfiniteLoop.csproj", "{3EFC1A5E-8B36-4782-A77E-EB51C65940D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.InfiniteLoop", "Clients\Client.AppConsole.InfiniteLoop\Client.AppConsole.InfiniteLoop.csproj", "{3EFC1A5E-8B36-4782-A77E-EB51C65940D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.SelfHosted.With.Configuration", "Clients\Client.AppConsole.SelfHosted.With.Configuration\Client.AppConsole.SelfHosted.With.Configuration.csproj", "{7B4A84D0-FB92-4193-A5D9-D650DDB92254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.SelfHosted.With.Configuration", "Clients\Client.AppConsole.SelfHosted.With.Configuration\Client.AppConsole.SelfHosted.With.Configuration.csproj", "{7B4A84D0-FB92-4193-A5D9-D650DDB92254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.SelfHosted.InfiniteLoop", "Clients\Client.AppConsole.SelfHosted.InfiniteLoop\Client.AppConsole.SelfHosted.InfiniteLoop.csproj", "{D600000A-CDAF-4D4E-BC9E-C7B46C509C88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.SelfHosted.InfiniteLoop", "Clients\Client.AppConsole.SelfHosted.InfiniteLoop\Client.AppConsole.SelfHosted.InfiniteLoop.csproj", "{D600000A-CDAF-4D4E-BC9E-C7B46C509C88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.With.OpenTelemetry", "Clients\Client.AppConsole.With.OpenTelemetry\Client.AppConsole.With.OpenTelemetry.csproj", "{4E9684DC-1CFF-4D08-97EB-FC802F7B50A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.With.OpenTelemetry", "Clients\Client.AppConsole.With.OpenTelemetry\Client.AppConsole.With.OpenTelemetry.csproj", "{4E9684DC-1CFF-4D08-97EB-FC802F7B50A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.Configuration", "Clients\Client.AppConsole.Configuration\Client.AppConsole.Configuration.csproj", "{28BB456B-863D-47A6-9CC5-A564664B68FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.Configuration", "Clients\Client.AppConsole.Configuration\Client.AppConsole.Configuration.csproj", "{28BB456B-863D-47A6-9CC5-A564664B68FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.Configuration.NotNot.AppSettings", "Clients\Client.AppConsole.Configuration.NotNot.AppSettings\Client.AppConsole.Configuration.NotNot.AppSettings.csproj", "{BA9DEAC5-2FBC-4C2E-80C8-565989C6460B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.Configuration.NotNot.AppSettings", "Clients\Client.AppConsole.Configuration.NotNot.AppSettings\Client.AppConsole.Configuration.NotNot.AppSettings.csproj", "{BA9DEAC5-2FBC-4C2E-80C8-565989C6460B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppConsole.SelfHosted.With.OpenTelemetry", "Clients\Client.AppConsole.SelfHosted.With.OpenTelemetry\Client.AppConsole.SelfHosted.With.OpenTelemetry.csproj", "{3C92EE41-504A-47C9-9ECC-0F321471310D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.SelfHosted.With.OpenTelemetry", "Clients\Client.AppConsole.SelfHosted.With.OpenTelemetry\Client.AppConsole.SelfHosted.With.OpenTelemetry.csproj", "{3C92EE41-504A-47C9-9ECC-0F321471310D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAspireStarter.AppDefaults", "SampleAspireStarter.AppDefaults\SampleAspireStarter.AppDefaults.csproj", "{3F10B08F-4B2E-4731-87F3-602799F2B038}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWinForms", "Clients\Client.AppWinForms\Client.AppWinForms.csproj", "{739C95B9-B199-44FC-B643-75BDBB925F13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWPF", "Clients\Client.AppWPF\Client.AppWPF.csproj", "{46F6205A-CD0B-4A05-81A6-760A2A1DF738}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,12 +199,21 @@ Global
 		{3C92EE41-504A-47C9-9ECC-0F321471310D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C92EE41-504A-47C9-9ECC-0F321471310D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C92EE41-504A-47C9-9ECC-0F321471310D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F10B08F-4B2E-4731-87F3-602799F2B038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F10B08F-4B2E-4731-87F3-602799F2B038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F10B08F-4B2E-4731-87F3-602799F2B038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F10B08F-4B2E-4731-87F3-602799F2B038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739C95B9-B199-44FC-B643-75BDBB925F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739C95B9-B199-44FC-B643-75BDBB925F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739C95B9-B199-44FC-B643-75BDBB925F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739C95B9-B199-44FC-B643-75BDBB925F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F6205A-CD0B-4A05-81A6-760A2A1DF738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F6205A-CD0B-4A05-81A6-760A2A1DF738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F6205A-CD0B-4A05-81A6-760A2A1DF738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F6205A-CD0B-4A05-81A6-760A2A1DF738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {772EABCD-C918-448E-9923-DDF3A23FE9FC}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5C816ABB-F895-46FF-B8B0-F94E4635FC57} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
@@ -228,5 +243,10 @@ Global
 		{28BB456B-863D-47A6-9CC5-A564664B68FA} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
 		{BA9DEAC5-2FBC-4C2E-80C8-565989C6460B} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
 		{3C92EE41-504A-47C9-9ECC-0F321471310D} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
+		{739C95B9-B199-44FC-B643-75BDBB925F13} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
+		{46F6205A-CD0B-4A05-81A6-760A2A1DF738} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {772EABCD-C918-448E-9923-DDF3A23FE9FC}
 	EndGlobalSection
 EndGlobal
