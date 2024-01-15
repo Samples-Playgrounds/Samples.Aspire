@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
+    <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.2.23619.3" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -46,7 +46,44 @@
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Desktop\Client.AppAvalonia.XPlat.Desktop.csproj">
     </ProjectReference>
+
+    <!-- 
+      Clients with incompatible TFMs need this in ProjectReference:
+
+      SkipGetTargetFrameworkProperties="true" 
+      ReferenceOutputAssembly="false" 
+
+      NOTE: this did not work in preview1 - prevew2 is a MUST
+    -->
+
     <!--
+      MAUI Integration
+    -->
+    <ProjectReference
+      Include="..\Clients\Client.AppMAUI\Client.AppMAUI.csproj"
+      SkipGetTargetFrameworkProperties="true" 
+      ReferenceOutputAssembly="false" 
+      >
+    </ProjectReference>
+    <!--
+      WinForms Integration
+    -->
+    <ProjectReference 
+      Include="../Clients/Client.AppWPF/Client.AppWPF.csproj" 
+      SkipGetTargetFrameworkProperties="true" 
+      ReferenceOutputAssembly="false" 
+      />
+    <!--
+      WPF Integration
+    -->
+    <ProjectReference 
+      Include="../Clients/Client.AppWPF/Client.AppWPF.csproj" 
+      SkipGetTargetFrameworkProperties="true" 
+      ReferenceOutputAssembly="false" 
+      />
+
+    <!--
+      UNO Integration
     <ProjectReference
       Include="..\Clients\Client.AppUNO\Client.AppUNO.Wasm\Client.AppUNO.Wasm.csproj"
       >
