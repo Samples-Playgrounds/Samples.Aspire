@@ -69,6 +69,7 @@
       WinForms Integration
     -->
     <ProjectReference 
+      Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'"
       Include="../Clients/Client.AppWPF/Client.AppWPF.csproj" 
       SkipGetTargetFrameworkProperties="true" 
       ReferenceOutputAssembly="false" 
@@ -77,6 +78,7 @@
       WPF Integration
     -->
     <ProjectReference 
+      Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'"
       Include="../Clients/Client.AppWPF/Client.AppWPF.csproj" 
       SkipGetTargetFrameworkProperties="true" 
       ReferenceOutputAssembly="false" 
