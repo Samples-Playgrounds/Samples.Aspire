@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SampleAspireStarter.AppDefaults\SampleAspireStarter.AppDefaults.csproj" />
+    <ProjectReference Include="..\Clients.AppDefaults\Clients.AppDefaults.csproj" />
   </ItemGroup>
   
   <ItemGroup>
