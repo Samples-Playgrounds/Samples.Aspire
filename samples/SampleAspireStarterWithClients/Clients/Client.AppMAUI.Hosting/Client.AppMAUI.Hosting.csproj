@@ -64,6 +64,46 @@
 
 	<!-- 
 		https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022#projectreference
-
 	-->
+
+
+	<!-- 
+	====================================================================================================================
+	MAUI integration
+		start
+	-->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference 
+			Include="Microsoft.Extensions.ServiceDiscovery"
+		  	Version="8.0.0-preview.2.23619.3" 
+			/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Clients.AppDefaults\Clients.AppDefaults.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="System.Net.Http" />
+		<Using Include="System.Net.Http.Json" />
+		<Using Include="Microsoft.Extensions.Hosting" />
+		<Using Include="Microsoft.Extensions.DependencyInjection" />
+		<Using Include="Microsoft.Extensions.Logging" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Properties\appsettings.json;Properties\appsettings.*.json" />
+		<Content Include="Properties\appsettings.json;Properties\appsettings.*.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		</Content>
+	</ItemGroup>
+	<!-- 
+		stop
+	MAUI integration
+	====================================================================================================================
+	-->
+	
 </Project>

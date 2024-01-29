@@ -16,14 +16,15 @@ internal static class Program
         // -------------------------------------------------------------------------------------------------------------
         // Hosting
         //  start
-        var builder = Host.CreateApplicationBuilder();
+        HostApplicationBuilder builder = Host.CreateApplicationBuilder();
 
         builder.AddAppDefaults();
 
-        var scheme = builder.Environment.IsDevelopment() ? "http" : "https";
-        builder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://apiservice"));
+        string scheme = builder.Environment.IsDevelopment() ? "http" : "https";
+        Uri endpoint = new($"{scheme}://apiservice");
+        builder.Services.AddHttpClient<Client.Services.WeatherApiClient>(client => client.BaseAddress = endpoint);
 
-        var app = builder.Build();
+        IHost app = builder.Build();
         Services = app.Services;
         app.Start();
         //  stop

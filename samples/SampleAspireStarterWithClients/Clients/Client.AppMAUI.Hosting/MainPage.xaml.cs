@@ -1,24 +1,56 @@
-﻿namespace Client.AppMAUI;
+﻿using Client.Services;
+
+namespace Client.AppMAUI;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	private readonly ILogger _logger;
+	private readonly WeatherApiClient _weatherApiClient;
+	private readonly CancellationTokenSource _closingCts = new();
 
-	public MainPage()
+	public MainPage(ILogger<MainPage> logger, WeatherApiClient weatherApiClient)
 	{
 		InitializeComponent();
+
+		_logger = logger;
+		_weatherApiClient = weatherApiClient;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
 		SemanticScreenReader.Announce(CounterBtn.Text);
+		
+		CounterBtn.IsEnabled = false;
+		//pbLoading.Visible = true;
+
+		try
+		{
+			/*
+			if (chkForceError.Checked)
+			{
+				throw new InvalidOperationException("Forced error!");
+			}
+			*/
+			
+			WeatherForecast[] weather = await _weatherApiClient.GetWeatherAsync(_closingCts.Token);
+			//dgWeather.DataSource = weather;
+		}
+		catch (TaskCanceledException)
+		{
+			return;
+		}
+		catch (Exception ex)
+		{
+			_logger.LogError(ex, "Error loading weather");
+
+			// dgWeather.DataSource = null;
+			DisplayAlert(ex.Message, "Error", "Accept", "Cancel");
+		}
+
+		//pbLoading.Visible = false;
+		CounterBtn.IsEnabled = true;
+
+		return;
 	}
 }
 

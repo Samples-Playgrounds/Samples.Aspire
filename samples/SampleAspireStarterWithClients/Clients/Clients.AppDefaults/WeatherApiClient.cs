@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Json;
 
-namespace Client.AppWinForms;
+namespace Client.Services;
 
 public class WeatherApiClient(HttpClient httpClient)
 {

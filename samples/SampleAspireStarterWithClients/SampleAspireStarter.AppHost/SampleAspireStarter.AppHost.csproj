@@ -65,6 +65,12 @@
       ReferenceOutputAssembly="false" 
       >
     </ProjectReference>
+    <ProjectReference
+      Include="..\Clients\Client.AppMAUI.Hosting\Client.AppMAUI.Hosting.csproj"
+      SkipGetTargetFrameworkProperties="true"
+      ReferenceOutputAssembly="false"
+      >
+    </ProjectReference>
     <!--
       WinForms Integration
     -->
@@ -74,6 +80,12 @@
       SkipGetTargetFrameworkProperties="true" 
       ReferenceOutputAssembly="false" 
       />
+    <ProjectReference
+      Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'"
+      Include="../Clients/Client.AppWPF.Hosting/Client.AppWPF.Hosting.csproj"
+      SkipGetTargetFrameworkProperties="true"
+      ReferenceOutputAssembly="false"
+    />
     <!--
       WPF Integration
     -->
@@ -82,6 +94,12 @@
       Include="../Clients/Client.AppWPF/Client.AppWPF.csproj" 
       SkipGetTargetFrameworkProperties="true" 
       ReferenceOutputAssembly="false" 
+      />
+    <ProjectReference
+      Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'"
+      Include="../Clients/Client.AppWPF.Hosting/Client.AppWPF.Hosting.csproj"
+      SkipGetTargetFrameworkProperties="true"
+      ReferenceOutputAssembly="false"
       />
 
     <!--

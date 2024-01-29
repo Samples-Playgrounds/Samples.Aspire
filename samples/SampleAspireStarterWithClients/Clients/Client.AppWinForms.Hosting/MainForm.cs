@@ -1,4 +1,6 @@
-﻿namespace Client.AppWinForms;
+﻿using Client.Services;
+
+namespace Client.AppWinForms;
 
 public partial class MainForm : Form
 {
