@@ -8,6 +8,14 @@ internal static class Program
     [STAThread]
     static void Main()
     {
+        /*
+            Original Windows.Forms code:
+
+         */
+
+        // -------------------------------------------------------------------------------------------------------------
+        // Hosting
+        //  start
         var builder = Host.CreateApplicationBuilder();
 
         builder.AddAppDefaults();
@@ -18,6 +26,9 @@ internal static class Program
         var app = builder.Build();
         Services = app.Services;
         app.Start();
+        //  stop
+        // Hosting
+        // -------------------------------------------------------------------------------------------------------------
 
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
