@@ -71,11 +71,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.Configura
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppConsole.SelfHosted.With.OpenTelemetry", "Clients\Client.AppConsole.SelfHosted.With.OpenTelemetry\Client.AppConsole.SelfHosted.With.OpenTelemetry.csproj", "{3C92EE41-504A-47C9-9ECC-0F321471310D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clients.AppDefaults", "Clients\Clients.AppDefaults\Clients.AppDefaults.csproj", "{9BC5A886-C275-44F4-A8E4-3097A1DAB5AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clients.AppDefaults", "Clients\Clients.AppDefaults\Clients.AppDefaults.csproj", "{9BC5A886-C275-44F4-A8E4-3097A1DAB5AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppWPF.Hosting", "Clients\Client.AppWPF.Hosting\Client.AppWPF.Hosting.csproj", "{AC599D0C-F3EB-4509-A8E2-75509B02C2CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWPF.Hosting", "Clients\Client.AppWPF.Hosting\Client.AppWPF.Hosting.csproj", "{AC599D0C-F3EB-4509-A8E2-75509B02C2CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.AppWinForms.Hosting", "Clients\Client.AppWinForms.Hosting\Client.AppWinForms.Hosting.csproj", "{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWinForms.Hosting", "Clients\Client.AppWinForms.Hosting\Client.AppWinForms.Hosting.csproj", "{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWinForms", "Clients\Client.AppWinForms\Client.AppWinForms.csproj", "{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.AppWPF", "Clients\Client.AppWPF\Client.AppWPF.csproj", "{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,6 +215,14 @@ Global
 		{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -246,6 +258,8 @@ Global
 		{9BC5A886-C275-44F4-A8E4-3097A1DAB5AE} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
 		{AC599D0C-F3EB-4509-A8E2-75509B02C2CC} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
 		{2A8D3E6B-4867-4FDD-A7C7-0ED4F55EF3C2} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
+		{C1E0C173-1AAD-4958-9A5A-9CF7F036B79D} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
+		{ADF75C6C-6C1B-4E49-98CC-0CC061E5061E} = {EA3C4D3D-2EA7-46FE-ACE0-52924B5532A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {772EABCD-C918-448E-9923-DDF3A23FE9FC}
