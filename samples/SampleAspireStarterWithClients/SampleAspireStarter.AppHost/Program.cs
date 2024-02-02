@@ -126,23 +126,16 @@ builder
                 "client_app_maui",
                 "../Clients/Client.AppMAUI/Client.AppMAUI.csproj"
             )
-            // pass to MAUI
-            // localhost:PORT           not possible
-            // IP_PRIVATE_NETWORK:PORT  possible??
             .WithReference(apiservice)
             ;
-
+/*
 builder
     .AddProject                                                 // NOTE: not strongly typed (not using generic version)
             (
                 "client_app_maui_hosting",
                 "../Clients/Client.AppMAUI.Hosting/Client.AppMAUI.Hosting.csproj"
             )
-            // pass to MAUI
-            // localhost:PORT           not possible
-            // IP_PRIVATE_NETWORK:PORT  possible??
             .WithReference(apiservice)
             ;
-//#endif
-
+*/
 builder.Build().Run();

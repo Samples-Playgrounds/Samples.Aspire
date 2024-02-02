@@ -42,14 +42,14 @@ internal static class Program
         builder.Services.AddSingleton<App>();
         builder.Services.AddSingleton<MainWindow>();
 
-        IHost appHost = builder.Build();
-        App app = appHost.Services.GetRequiredService<App>();
-        Window window = appHost.Services.GetRequiredService<MainWindow>();
+        IHost app_host = builder.Build();
+        App app = app_host.Services.GetRequiredService<App>();
+        Window window = app_host.Services.GetRequiredService<MainWindow>();
         
-        appHost.Start();
+        app_host.Start();
         app.Run(window);
 
-        appHost.StopAsync().GetAwaiter().GetResult();
+        app_host.StopAsync().GetAwaiter().GetResult();
         //  stop
         // Hosting
         // -------------------------------------------------------------------------------------------------------------

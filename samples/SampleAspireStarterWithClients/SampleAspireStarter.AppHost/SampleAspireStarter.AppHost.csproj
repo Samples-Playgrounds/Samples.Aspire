@@ -65,12 +65,15 @@
       ReferenceOutputAssembly="false" 
       >
     </ProjectReference>
+    <!--
     <ProjectReference
       Include="..\Clients\Client.AppMAUI.Hosting\Client.AppMAUI.Hosting.csproj"
       SkipGetTargetFrameworkProperties="true"
       ReferenceOutputAssembly="false"
       >
     </ProjectReference>
+    -->
+    
     <!--
       WinForms Integration
     -->

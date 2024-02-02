@@ -3,6 +3,10 @@ using ObjCRuntime;
 using UIKit;
 #endif
 
+using System;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 namespace Client.AppMAUI.Hosting;
 
 internal static class Program
@@ -21,11 +25,30 @@ internal static class Program
         Uri endpoint = new($"{scheme}://apiservice");
         builder.Services.AddHttpClient<Client.Services.WeatherApiClient>(client => client.BaseAddress = endpoint);
 
+        // WPF
+        /*
         builder.Services.AddSingleton<App>();
+        builder.Services.AddSingleton<MainPage>();
+        */
+        
 
-        IHost app = builder.Build();
-        Services = app.Services;
-        app.Start();
+        IHost app_host = builder.Build();
+
+        // WinForms
+        /*
+        */
+        Services = app_host.Services;
+        app_host.Start();
+
+        // WPF
+        /*
+        App app = app_host.Services.GetRequiredService<App>();
+        Page page = app_host.Services.GetRequiredService<MainPage>();
+        
+        app_host.Start();
+        app.Run(page);
+       */
+
         //  stop
         // Hosting
         // -------------------------------------------------------------------------------------------------------------
@@ -37,7 +60,7 @@ internal static class Program
         */
 
         #if ANDROID
-        MauiApp app = CreateMauiApp();
+        Microsoft.Maui.Hosting.MauiApp app_maui = CreateMauiApp();
         #endif
 
         #if IOS
@@ -52,14 +75,14 @@ internal static class Program
         UIApplication.Main(args, null, typeof(AppDelegate));
         #endif
         
-        app.StopAsync().GetAwaiter().GetResult();
+        app_host.StopAsync().GetAwaiter().GetResult();
 
         return;
     }
 
     public static IServiceProvider Services { get; private set; } = default!;
 
-    public static MauiApp CreateMauiApp()
+    public static Microsoft.Maui.Hosting.MauiApp CreateMauiApp()
     {
         return MauiProgram.CreateMauiApp();
     }
