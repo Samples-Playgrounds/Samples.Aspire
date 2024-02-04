@@ -40,6 +40,8 @@
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppConsole.SelfHosted.With.Configuration\Client.AppConsole.SelfHosted.With.Configuration.csproj">
     </ProjectReference>
+    <ProjectReference Include="..\Clients\Client.AppConsole.Microsoft.Extensions\Client.AppConsole.Microsoft.Extensions.csproj">
+    </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj">
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Browser\Client.AppAvalonia.XPlat.Browser.csproj">

@@ -69,6 +69,18 @@ builder
                                     )
     .WithReference(apiservice);
 
+
+builder
+    .AddProject<Projects.Client_AppConsole_Microsoft_Extensions>
+                                    (
+                                        "client_app_console_microsoft_extensions"
+                                    )
+    .WithReference(apiservice);
+
+
+
+
+
 builder
     .AddProject<Projects.Client_AppAvalonia_MVVM>               // NOTE: strongly typed (using generic version)
                                     (
