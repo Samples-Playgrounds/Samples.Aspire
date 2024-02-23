@@ -18,6 +18,10 @@ builder
                                     )
     .WithReference(apiservice);
 
+
+
+
+
 builder
     .AddProject<Projects.Client_AppConsole>
                                     (
@@ -80,25 +84,32 @@ builder
 
 
 
+builder
+    .AddProject<Projects.Client_AppAvaloniaUI>              // NOTE: strongly typed (using generic version)
+                                    (
+                                        "client_app_avalonia"
+                                    )
+    .WithReference(apiservice);
 
 builder
-    .AddProject<Projects.Client_AppAvalonia_MVVM>               // NOTE: strongly typed (using generic version)
+    .AddProject<Projects.Client_AppAvaloniaUI_MVVM>         // NOTE: strongly typed (using generic version)
                                     (
                                         "client_app_avalonia_mvvm"
                                     )
     .WithReference(apiservice);
 
+
 builder
-    .AddProject<Projects.Client_AppAvalonia_XPlat_Browser>      // NOTE: strongly typed (using generic version)
+    .AddProject<Projects.Client_AppAvaloniaUI_XPlat_Desktop>
                                     (
-                                        "client_app_avalonia_xplat_browser"
+                                        "client_app_avalonia_xplat_desktop"
                                     )
     .WithReference(apiservice);
 
 builder
-    .AddProject<Projects.Client_AppAvalonia_XPlat_Desktop>
+    .AddProject<Projects.Client_AppAvaloniaUI_XPlat_Browser>
                                     (
-                                        "client_app_avalonia_xplat_desktop"
+                                        "client_app_avalonia_xplat_browser"
                                     )
     .WithReference(apiservice);
 
@@ -141,6 +152,7 @@ builder
             .WithReference(apiservice)
             ;
 /*
+*/
 builder
     .AddProject                                                 // NOTE: not strongly typed (not using generic version)
             (
@@ -149,5 +161,5 @@ builder
             )
             .WithReference(apiservice)
             ;
-*/
+
 builder.Build().Run();

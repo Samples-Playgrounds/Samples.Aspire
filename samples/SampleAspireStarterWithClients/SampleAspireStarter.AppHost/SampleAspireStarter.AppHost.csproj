@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.2.23619.3" />
+    <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.3.24105.21" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -42,11 +42,17 @@
     </ProjectReference>
     <ProjectReference Include="..\Clients\Client.AppConsole.Microsoft.Extensions\Client.AppConsole.Microsoft.Extensions.csproj">
     </ProjectReference>
-    <ProjectReference Include="..\Clients\Client.AppAvalonia.MVVM\Client.AppAvalonia.MVVM.csproj">
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI\Client.AppAvaloniaUI.csproj">
     </ProjectReference>
-    <ProjectReference Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Browser\Client.AppAvalonia.XPlat.Browser.csproj">
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI.MVVM\Client.AppAvaloniaUI.MVVM.csproj">
     </ProjectReference>
-    <ProjectReference Include="..\Clients\Client.AppAvalonia.XPlat\Client.AppAvalonia.XPlat.Desktop\Client.AppAvalonia.XPlat.Desktop.csproj">
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI.XPlat\Client.AppAvaloniaUI.XPlat.Android\Client.AppAvaloniaUI.XPlat.Android.csproj">
+    </ProjectReference>
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI.XPlat\Client.AppAvaloniaUI.XPlat.iOS\Client.AppAvaloniaUI.XPlat.iOS.csproj">
+    </ProjectReference>
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI.XPlat\Client.AppAvaloniaUI.XPlat.Desktop\Client.AppAvaloniaUI.XPlat.Desktop.csproj">
+    </ProjectReference>
+    <ProjectReference Include="..\Clients\Client.AppAvaloniaUI.XPlat\Client.AppAvaloniaUI.XPlat.Browser\Client.AppAvaloniaUI.XPlat.Browser.csproj">
     </ProjectReference>
 
     <!-- 
@@ -109,11 +115,11 @@
 
     <!--
       UNO Integration
+    -->
     <ProjectReference
       Include="..\Clients\Client.AppUNO\Client.AppUNO.Wasm\Client.AppUNO.Wasm.csproj"
       >
     </ProjectReference>
-    -->
   </ItemGroup>
 
 </Project>
