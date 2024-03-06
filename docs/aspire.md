@@ -32,3 +32,4 @@
 ## Application Insights
 
 *   https://learn.microsoft.com/en-us/dotnet/aspire/deployment/azure/application-insights
+
