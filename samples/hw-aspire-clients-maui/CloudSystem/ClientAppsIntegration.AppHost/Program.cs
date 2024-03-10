@@ -3,9 +3,9 @@
 // HolisticWare.Tools.Devices.Android.Emulator.Launch("nexus_9_api_33");
 HolisticWare.Tools.Devices.Android.Emulator.Launch("Pixel_3a_API_34_extension_level_7_arm64-v8a");
 
-IDistributedApplicationBuilder builder = DistributedApplication.CreateBuilder(args);
+var builder = DistributedApplication.CreateBuilder(args);
 
-IResourceBuilder<ProjectResource> apiService = builder.AddProject<Projects.ClientAppsIntegration_ApiService>("apiservice");
+var apiService = builder.AddProject<Projects.ClientAppsIntegration_ApiService>("apiservice");
 
 // Register the client apps by project path as they target a TFM incompatible with the AppHost so can't be added as
 // regular project references (see the AppHost.csproj file for additional metadata added to the ProjectReference to
@@ -57,14 +57,6 @@ builder
          )
    .BuildClient("maccatalyst")
    ;
-
-foreach(IResource r in builder.Resources)
-{
-   foreach(IResourceAnnotation ra in r.Annotations)
-   {
-      ra.
-   }
-}
 
 builder
    // intercepting Build() to build/launch MAUI clients defined above
