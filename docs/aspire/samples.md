@@ -4,6 +4,7 @@ samples.md
 
 *   https://github.com/dotnet/aspire-samples
 
+*   https://github.com/timheuer/AspireTodo
 
 error NETSDK1004: Assets file '.\obj\project.assets.json' not found. Run a NuGet package restore to generate this file.
 
