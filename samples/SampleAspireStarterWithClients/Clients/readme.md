@@ -1,6 +1,7 @@
 
 
 
+```bash
 dotnet new \
     maui \
         -o Client.AppMAUI 
@@ -16,10 +17,10 @@ dotnet new \
 dotnet new \
     avalonia.xplat \
         -o Client.AppAvalonia.XPlat
+```
 
 
-
-
+```bash
 dotnet new \
     uninstall \
         Uno.Templates
@@ -43,17 +44,18 @@ dotnet new \
         Uno.Templates
 dotnet new install \
     Prism.Template
-    
+```
 
+```bash
 dotnet new \
     uninstall \
         Avalonia.Templates
 dotnet new \
     install \
         Avalonia.Templates
-    
+```
 
-
+```bash
 rm -fr Client.AppUNO/
 dotnet new unoapp \
     --output Client.AppUNO
@@ -69,3 +71,4 @@ dotnet new avalonia.mvvm \
 rm -fr Client.AppAvaloniaUI.XPlat/
 dotnet new avalonia.xplat \
     --output Client.AppAvaloniaUI.XPlat
+```
