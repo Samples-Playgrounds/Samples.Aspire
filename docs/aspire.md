@@ -2,13 +2,7 @@
 
 *   https://www.reddit.com/r/dotnet/comments/17wkl3f/can_someone_eli5_net_aspire/
 
-*   Dashboard
-
-    *   https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/dashboard
-
-    *   https://anthonysimmon.com/exploring-microsoft-developer-control-plane-core-dotnet-aspire-dotnet-8/
-
-
+*   https://logz.io/blog/decoding-net8-dotnet-aspire-stack-cloud-native-observability/
 
 
 ## Samples
