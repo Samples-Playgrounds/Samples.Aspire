@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Version>3.6.0</Version>
+    <AssemblyVersion>3.6.0.24067</AssemblyVersion>
+    <FileVersion>3.6.0.24067</FileVersion>
+    <InformationalVersion>3.6.0.24067</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Fast.Components.FluentUI" Version="3.0.*"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\AppAspireOrchestrator.ServiceDefaults\AppAspireOrchestrator.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

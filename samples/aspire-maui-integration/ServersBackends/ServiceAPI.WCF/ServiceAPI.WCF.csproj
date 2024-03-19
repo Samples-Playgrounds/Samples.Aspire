@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<!--
+<Project Sdk="Microsoft.NET.Sdk.Web">
+-->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <OutputType>exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="CoreWCF" />
+    <Using Include="CoreWCF.Configuration" />
+    <Using Include="CoreWCF.Channels" />
+    <Using Include="CoreWCF.Description" />
+    <Using Include="System.Runtime.Serialization " />
+    <Using Include="ServiceAPI.WCF" />
+    <Using Include="Microsoft.Extensions.DependencyInjection.Extensions" />
+  </ItemGroup>
+
+  <!--
+    if
+      <Project Sdk="Microsoft.NET.Sdk">
+    instead of
+      <Project Sdk="Microsoft.NET.Sdk.Web">
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.Primitives" Version="1.*" />
+    <PackageReference Include="CoreWCF.Http" Version="1.*" />
+  </ItemGroup>
+  <!--
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
+	  <PackageReference Include="CoreWCF.WebHttp" Version="1.0.0"/>
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\AppAspireOrchestrator.ServiceDefaults\AppAspireOrchestrator.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>
