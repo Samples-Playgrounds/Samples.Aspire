@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReproSample.OTLP.Tracing.ApiService\ReproSample.OTLP.Tracing.ApiService.csproj" />
+    <ProjectReference Include="..\ReproSample.OTLP.Tracing.ClientStub\ReproSample.OTLP.Tracing.ClientStub.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.3.24105.21" />
+    <PackageReference Include="AspireMobile.Hosting" Version="0.7.118-beta" />
+  </ItemGroup>
+
+</Project>
