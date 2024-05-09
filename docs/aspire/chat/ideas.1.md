@@ -12,7 +12,8 @@
         *   Making service discovery work
 
 Bret Johnson
-    best practices for provisioning the endpoint for dev inner loop scenarios and service discovery for that matter
+    best practices for provisioning the endpoint for dev inner loop scenarios and service discovery 
+    for that matter
 
 Chet Husk
 
@@ -20,10 +21,12 @@ Chet Husk
     dotnet run
     delegate to
     Run
-    targets provided by certain kinds of applications - but that clashes with the existing support for things like launchSettings.
+    targets provided by certain kinds of applications - but that clashes with the existing support 
+    for things like launchSettings.
 
-    [11/30 5:43 PM] Chet Husk
-    a big question I had for MAUI+Aspire is which actual target (simulator/device/etc) the Aspire orchestrator would launch. is that generally a static thing? would it require wiring up in the AppHost? would a user want to be prompted each time?
+    a big question I had for MAUI+Aspire is which actual target (simulator/device/etc) the Aspire 
+    orchestrator would launch. is that generally a static thing? would it require wiring up in the 
+    AppHost? would a user want to be prompted each time?
 
     because TFM isn't enough - you might have N different android simulators for different OS versions
 
@@ -34,25 +37,32 @@ David Fowler
 
 Chet
 
-IMO IConfiguration-based lookups of service discovery could be the final client-side surface area. everything else is just 'how do we get that data loaded into IConfiguration' (re: the 'nice end-to-end' point)
+IMO IConfiguration-based lookups of service discovery could be the final client-side surface area. 
+everything else is just 'how do we get that data loaded into IConfiguration' (re: the 'nice end-to-end' 
+point)
 
 Peppers
 
     It seems like a plain dotnet run (with a device or emulator up and already running)
-Seems like that should work today
+    Seems like that should work today
 
-```
-[11/30 6:07 PM] Jonathan Peppers
-Not sure we can do command-line arguments either
-[11/30 6:07 PM] Jonathan Peppers
-or working directory
-[11/30 6:08 PM] Chet Husk
-that's fine - you don't have to. those are part of the 'project' protocol. you can define whatever schema you want to support for a new protocol
-[11/30 6:08 PM] Jonathan Peppers
-Do we have a WinUI3 or UWP example? That might be what MAUI is closer to
-[11/30 6:08 PM] David Fowler
-Does Maui use launch profiles today at all?
-[11/30 6:08 PM] Chet Husk
+    Not sure we can do command-line arguments either
+    or working directory
+
+Chet Husk
+
+    that's fine - you don't have to. those are part of the 'project' protocol. you can define whatever 
+    schema you want to support for a new protocol
+
+Jonathan Peppers
+
+    Do we have a WinUI3 or UWP example? That might be what MAUI is closer to
+
+David Fowler
+
+    Does Maui use launch profiles today at all?
+
+Chet Husk
 I don't know of any such example for those
 [11/30 6:08 PM] Jonathan Peppers
 I think MAUI can use them on Windows
