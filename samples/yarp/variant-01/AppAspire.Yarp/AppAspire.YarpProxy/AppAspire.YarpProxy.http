@@ -1,0 +1,6 @@
+@AppAspire.YarpProxy_HostAddress = http://localhost:5224
+
+GET {{AppAspire.YarpProxy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

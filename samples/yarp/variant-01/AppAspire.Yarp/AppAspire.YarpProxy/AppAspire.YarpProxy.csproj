@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <EnableSdkContainerSupport>True</EnableSdkContainerSupport>
+    <PublishTrimmed>True</PublishTrimmed>
+    <PublishAot>True</PublishAot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Yarp.ReverseProxy" Version="2.3.0" />
+    <PackageReference Include="Yarp.Telemetry.Consumption" Version="2.3.0" />
+  </ItemGroup>
+
+    <!--
+    https://devkimchi.com/2024/08/12/different-containerising-options-for-dotnet-devs/
+        https://github.com/devkimchi/msbuild-for-containers
+
+    https://devblogs.microsoft.com/dotnet/streamline-container-build-dotnet-8/
+    https://laurentkempe.com/2022/11/14/dotnet-7-sdk-built-in-container-support-and-ubuntu-chiseled/
+    https://www.mytechramblings.com/posts/testing-chiseled-ubuntu-containers-with-dotnet/
+    https://medium.com/codex/net-6-now-on-ubuntu-22-04-dotnet-6-on-chiseled-ubuntu-containers-ubuntu-canonical-%EF%B8%8F-microsoft-19f5e3d3af1b
+    
+        
+    https://hub.docker.com/r/ubuntu/dotnet-deps
+    https://hub.docker.com/r/ubuntu/dotnet-runtime
+    https://hub.docker.com/r/ubuntu/dotnet-aspnet
+
+    https://systemadminspro.com/selecting-base-images-for-net-applications-minimum-vulnerabilities-maximum-performance/
+        
+    -->
+    <PropertyGroup>
+        <ContainerRepository>apiapp</ContainerRepository>
+        <ContainerImageTag>latest</ContainerImageTag>
+        <ContainerImageName>dotnet-webapp-chiseled</ContainerImageName>
+        <ContainerBaseImage>mcr.microsoft.com/dotnet/nightly/runtime-deps:10.0-jammy-chiseled</ContainerBaseImage>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <PublishTrimmed>true</PublishTrimmed>
+
+    </PropertyGroup>
+    
+</Project>
