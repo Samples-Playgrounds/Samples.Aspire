@@ -12,6 +12,10 @@
     <EnableSdkContainerSupport>True</EnableSdkContainerSupport>
     <PublishTrimmed>True</PublishTrimmed>
     <PublishAot>True</PublishAot>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <TrimmerSingleWarn>false</TrimmerSingleWarn>
+    <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
   </PropertyGroup>
 
 </Project>
