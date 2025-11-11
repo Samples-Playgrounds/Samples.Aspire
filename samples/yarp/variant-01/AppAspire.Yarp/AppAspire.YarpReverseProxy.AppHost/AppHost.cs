@@ -1,10 +1,7 @@
 using Aspire.Hosting;
 using Aspire.Hosting.ApplicationModel;
-using Aspire.Hosting.Azure;
 using Aspire.Hosting.Docker;
 using Aspire.Hosting.Kubernetes;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 
 IDistributedApplicationBuilder builder = DistributedApplication.CreateBuilder(args);
@@ -19,8 +16,6 @@ IResourceBuilder<ProjectResource> web2;
 
 env_docker_compose = builder.AddDockerComposeEnvironment("docker-compose");
 env_k8s_cluster = builder.AddKubernetesEnvironment("k8s-cluster");
-
-builder.AddServiceDefaults();
 
 web1 = builder
             .AddProject<Projects.AppBlazor_WebHomePage>("blazor-web1")
@@ -41,7 +36,7 @@ web2 = builder
             ;
 
 yarp = builder
-            .AddProject<Projects.AppAspire_YarpProxy>("yarp-proxy")
+            .AddProject<Projects.AppAspire_YarpReverseProxy>("yarp-proxy")
             // Use the built‑in ServiceDefaults to get health checks, logs, etc.
             //.WithServiceDefaults()
             ;

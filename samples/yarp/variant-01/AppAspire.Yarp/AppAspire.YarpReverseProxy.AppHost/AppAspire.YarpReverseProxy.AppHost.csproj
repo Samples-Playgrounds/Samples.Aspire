@@ -11,10 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--
-    -->
-    <ProjectReference Include="..\AppAspire.Yarp.ServiceDefaults\AppAspire.Yarp.ServiceDefaults.csproj" />
-    <ProjectReference Include="..\AppAspire.YarpProxy\AppAspire.YarpProxy.csproj" />
+    <ProjectReference Include="..\AppAspire.YarpReverseProxy\AppAspire.YarpReverseProxy.csproj" />
     <ProjectReference Include="..\AppBlazor.WebHomePage\AppBlazor.WebHomePage.csproj" />
     <ProjectReference Include="..\AppBlazor.WebPh4ct3x\AppBlazor.WebPh4ct3x.csproj" />
   </ItemGroup>

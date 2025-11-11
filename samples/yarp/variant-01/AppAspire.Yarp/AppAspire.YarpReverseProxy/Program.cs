@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 // --- Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();

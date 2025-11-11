@@ -19,6 +19,12 @@
     <PackageReference Include="Yarp.Telemetry.Consumption" Version="2.3.0" />
   </ItemGroup>
 
+    <ItemGroup>
+        <!--
+        -->
+        <ProjectReference Include="..\AppAspire.YarpReverseProxy.ServiceDefaults\AppAspire.YarpReverseProxy.ServiceDefaults.csproj" />
+    </ItemGroup>
+    
     <!--
     https://devkimchi.com/2024/08/12/different-containerising-options-for-dotnet-devs/
         https://github.com/devkimchi/msbuild-for-containers

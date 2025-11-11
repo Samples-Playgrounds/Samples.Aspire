@@ -18,4 +18,8 @@
     <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
   </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\AppAspire.YarpReverseProxy.ServiceDefaults\AppAspire.YarpReverseProxy.ServiceDefaults.csproj" />
+    </ItemGroup>
+
 </Project>
