@@ -6,50 +6,71 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-
-  <PropertyGroup>
-    <InvariantGlobalization>true</InvariantGlobalization>
-    <EnableSdkContainerSupport>True</EnableSdkContainerSupport>
-    <PublishTrimmed>True</PublishTrimmed>
-    <PublishAot>True</PublishAot>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Yarp.ReverseProxy" Version="2.3.0" />
     <PackageReference Include="Yarp.Telemetry.Consumption" Version="2.3.0" />
   </ItemGroup>
 
-    <ItemGroup>
-        <!--
-        -->
-        <ProjectReference Include="..\AppAspire.YarpReverseProxy.ServiceDefaults\AppAspire.YarpReverseProxy.ServiceDefaults.csproj" />
-    </ItemGroup>
-    
-    <!--
-    https://devkimchi.com/2024/08/12/different-containerising-options-for-dotnet-devs/
-        https://github.com/devkimchi/msbuild-for-containers
+  <ItemGroup>
+      <!--
+      -->
+      <ProjectReference Include="..\AppAspire.YarpReverseProxy.ServiceDefaults\AppAspire.YarpReverseProxy.ServiceDefaults.csproj" />
+  </ItemGroup>
+  
+  <!--
+  https://devkimchi.com/2024/08/12/different-containerising-options-for-dotnet-devs/
+      https://github.com/devkimchi/msbuild-for-containers
 
-    https://devblogs.microsoft.com/dotnet/streamline-container-build-dotnet-8/
-    https://laurentkempe.com/2022/11/14/dotnet-7-sdk-built-in-container-support-and-ubuntu-chiseled/
-    https://www.mytechramblings.com/posts/testing-chiseled-ubuntu-containers-with-dotnet/
-    https://medium.com/codex/net-6-now-on-ubuntu-22-04-dotnet-6-on-chiseled-ubuntu-containers-ubuntu-canonical-%EF%B8%8F-microsoft-19f5e3d3af1b
-    
+  https://devblogs.microsoft.com/dotnet/streamline-container-build-dotnet-8/
+  https://laurentkempe.com/2022/11/14/dotnet-7-sdk-built-in-container-support-and-ubuntu-chiseled/
+  https://www.mytechramblings.com/posts/testing-chiseled-ubuntu-containers-with-dotnet/
+  https://medium.com/codex/net-6-now-on-ubuntu-22-04-dotnet-6-on-chiseled-ubuntu-containers-ubuntu-canonical-%EF%B8%8F-microsoft-19f5e3d3af1b
+  
+      
+  https://hub.docker.com/r/ubuntu/dotnet-deps
+  https://hub.docker.com/r/ubuntu/dotnet-runtime
+  https://hub.docker.com/r/ubuntu/dotnet-aspnet
+
+  https://systemadminspro.com/selecting-base-images-for-net-applications-minimum-vulnerabilities-maximum-performance/
         
-    https://hub.docker.com/r/ubuntu/dotnet-deps
-    https://hub.docker.com/r/ubuntu/dotnet-runtime
-    https://hub.docker.com/r/ubuntu/dotnet-aspnet
+  https://learn.microsoft.com/en-us/visualstudio/containers/container-msbuild-properties?view=vs-2022
+  https://github.com/dotnet/sdk-container-builds
+  https://github.com/dotnet/dotnet-docker/blob/main/documentation/ubuntu-chiseled.md
+  https://github.com/dotnet/dotnet-docker/blob/main/documentation/image-variants.md
+  https://www.mytechramblings.com/posts/trying-out-the-built-in-container-support-for-the-dotnet-7-sdk/
+  https://devkimchi.com/2024/08/12/different-containerising-options-for-dotnet-devs/
 
-    https://systemadminspro.com/selecting-base-images-for-net-applications-minimum-vulnerabilities-maximum-performance/
-        
-    -->
-    <PropertyGroup>
-        <ContainerRepository>apiapp</ContainerRepository>
-        <ContainerImageTag>latest</ContainerImageTag>
-        <ContainerImageName>dotnet-webapp-chiseled</ContainerImageName>
-        <ContainerBaseImage>mcr.microsoft.com/dotnet/nightly/runtime-deps:10.0-jammy-chiseled</ContainerBaseImage>
-        <InvariantGlobalization>true</InvariantGlobalization>
-        <PublishTrimmed>true</PublishTrimmed>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/runtime-deps:10.0-noble-chiseled</ContainerBaseImage>
+  -->
+  <PropertyGroup>
+    <DockerfileFile>Dockerfile</DockerfileFile>
+  </PropertyGroup>
 
-    </PropertyGroup>
+  <PropertyGroup>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    <PublishProfile>DefaultContainer</PublishProfile>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <ContainerImageName>reverseproxyyarp</ContainerImageName>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled</ContainerBaseImage>
+    <ContainerImageTags>latest</ContainerImageTags>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <EnableSdkContainerSupport>True</EnableSdkContainerSupport>
+    <PublishTrimmed>True</PublishTrimmed>
+    <PublishAot>True</PublishAot>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <TrimmerSingleWarn>false</TrimmerSingleWarn>
+    <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ContainerPort Include="8080" Type="tcp" />
+  </ItemGroup>
     
 </Project>
