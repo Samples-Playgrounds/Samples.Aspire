@@ -1,3 +1,3 @@
 {
-  "appHostPath": "../AppAspire.Yarp.AppHost/AppAspire.Yarp.AppHost.csproj"
+  "appHostPath": "../AppAspire.YarpReverseProxy.AppHost/AppAspire.YarpReverseProxy.AppHost.csproj"
 }
